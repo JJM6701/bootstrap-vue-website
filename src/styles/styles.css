@@ -1,0 +1,23 @@
+h2,
+h3 {
+  font-weight: bold;
+  color: #343a40;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.125rem;
+  color: #6c757d;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.375rem;
+}
