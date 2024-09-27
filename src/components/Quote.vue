@@ -1,5 +1,5 @@
 <template>
-  <section class="quote-section text-center py-5 m-5 mb-5 rounded-4">
+  <section class="quote-section text-center py-5 m-5 mb-5 rounded-4 shadow">
     <div class="container">
       <div class="d-flex flex-column align-items-center">
         <img
@@ -9,8 +9,8 @@
           width="150"
           height="150"
         />
-        <h4 class="mb-3 fs-2">Tomas Smith</h4>
-        <p class="text-dark w-50 fs-6 fw-semibold">
+        <h4 class="mb-3 fs-2 text-dark">Tomas Smith</h4>
+        <p class="w-50 fs-6 fw-semibold text-dark">
           "Next Lead transformed our lead generation strategy, delivering
           outstanding results with professionalism and expertise. Highly
           recommend!"

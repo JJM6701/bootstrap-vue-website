@@ -13,11 +13,13 @@
             insights and innovative techniques, we help companies generate
             high-quality leads and boost conversions.
           </p>
-          <a href="contact.html" class="btn btn-danger fw-bold">Contact Us</a>
+          <RouterLink to="/contact" class="btn btn-danger fw-bold"
+            >Contact Us</RouterLink
+          >
         </div>
 
         <!-- Image Section -->
-        <div class="col-md-6">
+        <div class="col-md-6 my-5">
           <img
             src="../assets/team.jpg"
             class="img-fluid w-80 h-80 object-fit-cover rounded"

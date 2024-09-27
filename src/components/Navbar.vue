@@ -1,24 +1,15 @@
-<script setup>
-import { defineEmits } from "vue";
-
-const emit = defineEmits(["page-change"]);
-
-const changePage = (page) => {
-  emit("page-change", page);
-};
-</script>
-
 <template>
   <nav class="navbar navbar-expand-md px-md-4 py-3 bg-light">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="" @click.prevent="changePage('IndexView')">
+      <RouterLink to="/" class="navbar-brand d-flex align-items-center">
         <img
           src="../assets/logo.png"
           alt="Logo"
           class="img-fluid"
           style="max-width: 100px; border-radius: 4px"
         />
-      </a>
+      </RouterLink>
+
       <button
         class="navbar-toggler"
         type="button"
@@ -30,61 +21,35 @@ const changePage = (page) => {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div
-        class="collapse navbar-collapse justify-content-between"
-        id="navbarNav"
-      >
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul
           class="navbar-nav mx-auto fw-bold d-flex justify-content-center gap-md-4"
         >
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              @click.prevent="changePage('ServicesView')"
-            >
-              Service
-            </a>
+            <RouterLink class="nav-link" to="/services">Service</RouterLink>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              @click.prevent="changePage('AboutView')"
-            >
-              About
-            </a>
+            <RouterLink class="nav-link" to="/about">About</RouterLink>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              @click.prevent="changePage('StudiesView')"
+            <RouterLink class="nav-link" to="/case-studies"
+              >Case Studies</RouterLink
             >
-              Case Studies
-            </a>
           </li>
         </ul>
+
         <ul
           class="navbar-nav d-flex align-items-center gap-md-4 gap-2 mt-2 mt-md-0"
         >
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i
-                class="bi bi-search"
-                style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.158)"
-              ></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
+            <RouterLink
               class="btn btn-danger fs-6 fw-bold px-4"
-              href="#"
+              to="/contact"
               style="border-radius: 20px"
-              @click.prevent="changePage('ContactView')"
             >
               Contact Us
-            </a>
+            </RouterLink>
           </li>
         </ul>
       </div>
@@ -94,43 +59,68 @@ const changePage = (page) => {
 
 <style scoped>
 .navbar-brand img {
+  height: 60px;
   max-width: 100px;
   border-radius: 4px;
 }
 
-.navbar-nav {
-  flex-direction: row;
-  gap: 50px;
-}
-
-.navbar-nav.mx-auto {
+.navbar-toggler {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  flex-grow: 1;
 }
 
-.nav-link {
-  padding-right: 4rem;
-  padding-left: 4rem;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
-.d-flex .btn {
-  border-radius: 20px;
-}
-
-@media (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
 
-  .nav-link {
-    padding-right: 0;
-    padding-bottom: 0.5rem;
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    border-radius: 4px;
+  }
+
+  .navbar-toggler {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
   }
 
   .d-flex {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 20px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: auto;
   }
 }
 

@@ -9,9 +9,9 @@
         Drive Traffic, Boost Rankings, and Grow Your Brand <br />
         with the Experts in Marketing.
       </p>
-      <a href="/pages/contact.html" class="btn btn-danger fw-bold w-auto p-3">
+      <RouterLink to="/contact" class="btn btn-danger fw-bold w-auto p-3">
         Get Started
-      </a>
+      </RouterLink>
     </div>
   </section>
 </template>

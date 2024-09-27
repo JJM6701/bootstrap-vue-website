@@ -1,8 +1,8 @@
 <template>
   <section class="content-section py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
+      <div class="row align-items-center column-reverse">
+        <div class="col-md-6 my-5">
           <img
             src="../assets/stats.jpg"
             class="img-fluid w-80 h-80 object-fit-cover rounded"
@@ -20,9 +20,9 @@
             management, Next Lead is your trusted partner in navigating the
             ever-evolving digital marketing landscape.
           </p>
-          <a href="services.html" class="btn btn-danger fw-bold"
-            >Our Packages</a
-          >
+          <RouterLink to="/services" class="btn btn-danger fw-bold">
+            Our Packages
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -32,5 +32,11 @@
 <style scoped>
 .object-fit-cover {
   object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .column-reverse {
+    flex-direction: column-reverse !important;
+  }
 }
 </style>

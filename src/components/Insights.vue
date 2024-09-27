@@ -1,6 +1,6 @@
 <template>
   <!-- Insights Section -->
-  <section class="insights-section bg-transparent p-5">
+  <section class="insights-section bg-transparent p-5 my-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
@@ -10,7 +10,9 @@
             crawler, imagine what you can achieve if you have the insights your
             competitors don't.
           </p>
-          <a href="./contact.html" class="btn btn-danger fw-bold">Contact Us</a>
+          <RouterLink to="/contact" class="btn btn-danger fw-bold"
+            >Contact Us</RouterLink
+          >
         </div>
         <div class="col-md-6">
           <div class="row g-3">

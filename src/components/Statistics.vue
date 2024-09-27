@@ -27,9 +27,9 @@
           <p class="fw-bold text-secondary">Google Indexed Keywords</p>
         </div>
       </div>
-      <a href="pages/studies.html" class="btn btn-danger fw-bold p-3"
-        >Case Studies</a
-      >
+      <RouterLink to="/case-studies" class="btn btn-danger fw-bold p-3">
+        Case Studies
+      </RouterLink>
     </div>
   </section>
 </template>

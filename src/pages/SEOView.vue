@@ -5,7 +5,7 @@ import Pricing from "../components/Pricing.vue";
 
 const pricingOptions = [
   {
-    price: "$500",
+    price: "500",
     planName: "Basic Plan",
     features: [
       "Keyword Research & Optimisation",
@@ -14,7 +14,7 @@ const pricingOptions = [
     ],
   },
   {
-    price: "$1000",
+    price: "1000",
     planName: "Standard Plan",
     features: [
       "Comprehensive Keyword Strategy",
@@ -23,7 +23,7 @@ const pricingOptions = [
     ],
   },
   {
-    price: "$2000",
+    price: "2000",
     planName: "Premium Plan",
     features: [
       "Full-Scope Keyword Strategy",

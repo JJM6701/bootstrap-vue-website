@@ -4,45 +4,45 @@
       <div class="row align-items-center">
         <!-- Logo Section -->
         <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
-          <a href="index.html">
+          <RouterLink to="/">
             <img src="../assets/logo.png" alt="Logo" class="img-fluid" />
-          </a>
+          </RouterLink>
         </div>
 
         <!-- Navigation Links -->
         <div class="col-md-6 text-center mb-3 mb-md-0">
           <ul class="list-inline mb-0">
             <li class="list-inline-item mx-3">
-              <a
-                href="pages/services.html"
+              <RouterLink
+                to="/services"
                 class="text-dark fw-bold text-decoration-none"
               >
                 Services
-              </a>
+              </RouterLink>
             </li>
             <li class="list-inline-item mx-3">
-              <a
-                href="pages/studies.html"
+              <RouterLink
+                to="/case-studies"
                 class="text-dark fw-bold text-decoration-none"
               >
                 Case Studies
-              </a>
+              </RouterLink>
             </li>
             <li class="list-inline-item mx-3">
-              <a
-                href="pages/about.html"
+              <RouterLink
+                to="/about"
                 class="text-dark fw-bold text-decoration-none"
               >
                 About
-              </a>
+              </RouterLink>
             </li>
             <li class="list-inline-item mx-3">
-              <a
-                href="pages/contact.html"
+              <RouterLink
+                to="/contact"
                 class="text-dark fw-bold text-decoration-none"
               >
                 Contact
-              </a>
+              </RouterLink>
             </li>
           </ul>
         </div>

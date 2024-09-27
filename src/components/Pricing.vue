@@ -1,16 +1,14 @@
 <template>
-  <!-- Pricing Section -->
   <section class="pricing-section py-5 bg-transparent">
     <div class="container">
       <div class="row g-4">
-        <!-- Loop through the pricingOptions array -->
         <div
           v-for="(option, index) in pricingOptions"
           :key="index"
           class="col-md-4"
         >
           <div class="pricing-card p-4 text-center shadow-sm rounded bg-white">
-            <h3 class="mb-4 fs-1 fw-bold">{{ option.price }}</h3>
+            <h3 class="mb-4 fs-1 fw-bold">${{ option.price }}</h3>
             <p class="mb-4 fw-bold">{{ option.planName }}</p>
             <ul class="list-unstyled mb-4">
               <li
@@ -21,9 +19,12 @@
                 {{ feature }}
               </li>
             </ul>
-            <a href="./contact.html" class="btn btn-danger fw-bold px-4"
-              >Sign Up</a
+            <button
+              @click="addToCart(option)"
+              class="btn btn-danger fw-bold px-4"
             >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -33,6 +34,7 @@
 
 <script setup>
 import { defineProps } from "vue";
+import { useCartStore } from "../stores/cartStore";
 
 const props = defineProps({
   pricingOptions: {
@@ -40,11 +42,17 @@ const props = defineProps({
     required: true,
   },
 });
+
+const cartStore = useCartStore();
+
+const addToCart = (option) => {
+  cartStore.addItem(option);
+};
 </script>
 
 <style scoped>
 .pricing-section {
-  margin-top: -300px;
+  margin-top: -150px;
 }
 
 .pricing-card {
